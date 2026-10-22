@@ -1,0 +1,49 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:fillViewport="true" android:background="#FFF9F1"
+ android:layout_width="match_parent" android:layout_height="match_parent">
+ <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+  <TextView android:id="@+id/editHeading" android:text="Recipe" android:textSize="26sp" android:textStyle="bold" android:textColor="#234538" android:paddingTop="8dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+  <EditText android:id="@+id/titleInput" android:hint="Recipe title" android:textSize="20sp" android:padding="12dp" android:minHeight="52dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <ImageView android:id="@+id/editMainImage" android:src="@drawable/recipe_placeholder" android:scaleType="centerCrop" android:contentDescription="Main image preview" android:layout_width="match_parent" android:layout_height="190dp"/>
+
+  <Button android:id="@+id/chooseMainImage" android:text="Choose main image" android:minHeight="48dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <TextView android:text="Ingredients" android:textStyle="bold" android:textSize="21sp" android:textColor="#315C4B" android:paddingTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+  <LinearLayout android:id="@+id/ingredientsContainer" android:orientation="vertical" android:background="#FFF9F1" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <Button android:id="@+id/addIngredient" android:text="+ Add Ingredient" android:minHeight="48dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+  <TextView android:text="Time required" android:textStyle="bold" android:textSize="21sp" android:textColor="#315C4B" android:paddingTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <TextView android:text="Enter hours and minutes." android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+   <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:padding="4dp">
+    <TextView android:text="Prep" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/prepHours" android:hint="Hours" android:inputType="number" android:minHeight="48dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/prepMinutes" android:hint="Minutes" android:inputType="number" android:minHeight="48dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   </LinearLayout>
+   <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:padding="4dp">
+    <TextView android:text="Cook" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/cookHours" android:hint="Hours" android:inputType="number" android:minHeight="48dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/cookMinutes" android:hint="Minutes" android:inputType="number" android:minHeight="48dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   </LinearLayout>
+   <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:padding="4dp">
+    <TextView android:text="Additional" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/additionalHours" android:hint="Hours" android:inputType="number" android:minHeight="48dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/additionalMinutes" android:hint="Minutes" android:inputType="number" android:minHeight="48dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   </LinearLayout>
+  </LinearLayout>
+  <TextView android:id="@+id/totalTime" android:text="Total: 0 minutes" android:textStyle="bold" android:textSize="17sp" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+  <TextView android:text="Steps" android:textStyle="bold" android:textSize="21sp" android:textColor="#315C4B" android:paddingTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <LinearLayout android:id="@+id/stepsContainer" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <Button android:id="@+id/addStep" android:text="+ Add Step" android:minHeight="48dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+  <TextView android:text="Additional photos" android:textStyle="bold" android:textSize="21sp" android:textColor="#315C4B" android:paddingTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <LinearLayout android:id="@+id/mediaContainer" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <Button android:id="@+id/addMedia" android:text="+ Add photo" android:minHeight="48dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+  <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="20dp" android:paddingBottom="20dp">
+   <Button android:id="@+id/cancelEdit" android:text="Cancel" android:minHeight="52dp" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+   <Button android:id="@+id/confirmEdit" android:text="Confirm" android:minHeight="52dp" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+  </LinearLayout>
+ </LinearLayout>
+</ScrollView>

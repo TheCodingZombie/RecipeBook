@@ -1,0 +1,9 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:orientation="vertical" android:transitionName="recipeCard" android:padding="10dp" android:layout_margin="6dp" android:background="#FFF9F1"
+ android:layout_width="match_parent" android:layout_height="wrap_content">
+ <ImageView android:id="@+id/recipeImage" android:scaleType="centerCrop" android:contentDescription="Recipe image"
+  android:layout_width="match_parent" android:layout_height="120dp"/>
+ <TextView android:id="@+id/recipeName" android:textStyle="bold" android:textSize="17sp" android:textColor="#234538" android:maxLines="2"
+  android:ellipsize="end" android:paddingTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+ <Button android:id="@+id/openRecipe" android:text="Open recipe" android:minHeight="48dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>
