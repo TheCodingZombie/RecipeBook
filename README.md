@@ -21,6 +21,4 @@ Package: `com.example.recipebook`.
 - Images are stored in persistent app memory that goes away when the app is deleted.
 
 ## Important implementation notes
-- The shared ZIP includes `recipe.json` and image files where the app can read the selected image URI. Image selection uses Android's Photo Picker via `GetContent`. If a provider does not allow persistent URI access, the selected URI may become unavailable later; for production, copy selected images into app-private storage on selection.
 - The shared file receiver is configured for `application/zip`. Some share targets wrap streams differently; the import handler supports `ACTION_SEND` and `ACTION_VIEW`.
-- The current schema is new (`recipes.db`). If migrating an existing installed database, add a schema migration rather than changing the version silently.
